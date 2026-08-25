@@ -1,0 +1,97 @@
+.about-authority {
+    color: #4d590d;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.google-reviews-section {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(4.5rem, 8vw, 7rem) 1.25rem;
+    background:
+        radial-gradient(circle at 10% 15%, rgba(214, 204, 171, 0.18), transparent 34%),
+        radial-gradient(circle at 90% 80%, rgba(148, 153, 110, 0.20), transparent 30%),
+        #4d590d;
+    color: #fff;
+}
+
+.google-reviews-section::before {
+    content: "";
+    position: absolute;
+    inset: 1.25rem;
+    border: 1px solid rgba(232, 227, 217, 0.16);
+    border-radius: 2rem;
+    pointer-events: none;
+}
+
+.google-reviews-shell {
+    position: relative;
+    z-index: 1;
+    width: min(1180px, 100%);
+    margin-inline: auto;
+}
+
+.google-reviews-header {
+    width: min(760px, 100%);
+    margin: 0 auto clamp(2rem, 4vw, 3.25rem);
+    text-align: center;
+}
+
+.google-reviews-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid rgba(232, 227, 217, 0.38);
+    border-radius: 999px;
+    color: #e8e3d9;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.google-reviews-header h2 {
+    margin: 0;
+    color: #fff;
+    font-family: "DM Serif Display", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.google-reviews-header p {
+    margin: 1.25rem auto 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+    line-height: 1.7;
+}
+
+.google-reviews-widget {
+    min-height: 250px;
+    padding: clamp(1rem, 2.5vw, 1.75rem);
+    border: 1px solid rgba(232, 227, 217, 0.24);
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 24px 65px rgba(28, 35, 5, 0.28);
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 640px) {
+    .google-reviews-section {
+        padding: 4rem 1rem;
+    }
+
+    .google-reviews-section::before {
+        inset: 0.65rem;
+        border-radius: 1.5rem;
+    }
+
+    .google-reviews-widget {
+        min-height: 300px;
+        padding: 0.65rem;
+        border-radius: 1.15rem;
+    }
+}
